@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html ng-app="triangleApp" lang="en">
+<head>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>Calculate Triangle</title>
+</head>
+<body>
+  <div class="col-md-12">
+    <div class="container" ng-controller="TriangleController as tri">
+      <div class="jumbotron">
+        <h1>Find Traiangle Type Program</h1>
+      </div>
+        <div class="col-md-6">
+          <div ng-if="tri.type == 1" class="col-md-6">
+            <img src="1.png" alt="Equilateral Triangle" class="img-rounded" style="height:200px;">
+            <h4>Equilateral Triangle</h4> 
+          </div>
+          <div ng-if="tri.type == 2" class="col-md-6">
+            <img src="2.png" alt="Isosceles Triangle" class="img-rounded" style="height:200px;">
+            <h4>Isosceles Triangle</h4> 
+          </div>
+          <div ng-if="tri.type == 3" class="col-md-6">
+            <img src="3.png" alt="Right Traiangle" class="img-rounded" style="height:200px;">
+            <h4>Right Traiangle</h4> 
+          </div>
+          <div ng-if="tri.type == 4" class="col-md-6">
+            <img src="4.png" alt="Scalene Traiangle" class="img-rounded" style="height:200px;">
+            <h4>Scalene Traiangle</h4> 
+          </div>
+          <span ng-if="done()"></span>
+        </div>
+        <div class="col-md-3 col-md-offset-2">
+          <form>
+            <div class="form-group">
+              <label for="input1">Input the frist side</label>
+              <input type="input" class="form-control" ng-model="tri.first" id="input1" placeholder="The first side">
+            </div>
+            <div class="form-group">
+              <label for="input2">Input the second side</label>
+              <input type="input" class="form-control" ng-model="tri.second" id="input2" placeholder="the second side">
+            </div>
+            <div class="form-group">
+              <label for="input3">Input the third side</label>
+              <input type="input" class="form-control" ng-model="tri.third"id="input3" placeholder="The Third side">
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="container">
+      <b>Member : </b>
+        <li>ชลธิชา บัวแก้ว 55010245</li>
+        <li>ชานน จรัสสุทธิกุล 55010280</li>
+        <li>วริษฐา พถฒิภากร 55011108</li>
+    </div>
+  </div>
+  <script src="jquery.js"></script>
+  <script src="angular.js"></script>
+  <script src="triangle.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
